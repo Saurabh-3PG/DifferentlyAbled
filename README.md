@@ -1,3 +1,8 @@
+## Steps to start
+- nvm use v12.13.0
+- yarn install
+- yarn start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
