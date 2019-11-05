@@ -7,14 +7,14 @@ import Drawer from './Drawer/Drawer';
 
 function App() {
   const [open, setOpen] = useState(false);
-  const showComponents = function() {
-    console.log('helllo')
+  const showComponents = function(e) {
+    document.querySelector('#main-content').focus();
   }
   return (
     <div id="differentlyAbled">
       <header>
         <Navbar bg="dark" variant="dark" fixed="top">
-          <Navbar.Brand href="#home">
+          <Navbar.Brand tabIndex="0" onClick={showComponents} onKeyDown={showComponents}>
             <img
               alt=""
               src={logo}
@@ -22,11 +22,10 @@ function App() {
               height="30"
               className="d-inline-block align-top"
             />
-            {' React Bootstrap'}
+            {' Skip to main content'}
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
               <Button variant="link"
                 onClick={() => setOpen(!open)}
                 aria-controls="nav-drawer"
@@ -40,17 +39,18 @@ function App() {
                   className="d-inline-block align-top"
                 />
               </Button>
-            </Navbar.Text>
           </Navbar.Collapse>
         </Navbar>
         <Collapse in={open}>
           <div id="nav-drawer">
-            <Drawer openComponent={showComponents}/>
+            <Drawer/>
           </div>
         </Collapse>
       </header>
-      <main>
-        <Typography />
+      <main id="main-content" tabIndex="-1">
+        <Container>
+          <Typography />
+        </Container>
       </main>
     </div>
   );
