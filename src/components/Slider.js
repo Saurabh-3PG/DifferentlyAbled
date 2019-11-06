@@ -53,7 +53,6 @@ class Slider extends React.Component {
     return <div>
       <input
         type='range'
-        role='slider'
         id={this.props.id}
         aria-valuenow={this.state.value}
         aria-valuetext={this.props.valueNow}

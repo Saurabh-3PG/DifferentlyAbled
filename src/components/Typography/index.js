@@ -1,12 +1,12 @@
 
-import React, { Component } from 'react';
-import { Navbar, Button, Collapse, Container, Row, Col, Image } from 'react-bootstrap';
-import headingUsingDiv from '../Images/heading-using-div.png';
-import headingUsinghTag from '../Images/heading-using-hTag.png';
-import paragraph from '../Images/paragraph.png';
-import listdefault from '../Images/list-hTag.png';
+import React from 'react';
+import { Row, Image } from 'react-bootstrap';
+import headingUsingDiv from '../../Images/heading-using-div.png';
+import headingUsinghTag from '../../Images/heading-using-hTag.png';
+import paragraph from '../../Images/paragraph.png';
+import listdefault from '../../Images/list-hTag.png';
 
-class Typography extends Component {
+class Typography extends React.Component {
 
     render(props) {
         return (
@@ -22,12 +22,12 @@ class Typography extends Component {
                                 Using default heading tag ie: h1 h2 h3 ... h6
 
                                 <h3>Using default html header tag, we donot required to add any additional aria to make it heading</h3>
-                            <img src={headingUsinghTag} alt="heading Using html heading Tag" />
+                            <Image src={headingUsinghTag} alt="heading Using html heading Tag" />
 
                             </li>
                             <li>Converting any div level element to header using html aria attributes
                                 <div role="heading" aria-level="3">Creating header using aria attributes.</div>
-                            <img src={headingUsingDiv} alt="heading Using aria attribute" />
+                            <Image src={headingUsingDiv} alt="heading Using aria attribute" />
                             </li>
                         </ol>
                 </Row>
