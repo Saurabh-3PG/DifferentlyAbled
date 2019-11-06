@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import { Navbar, Button, Collapse, Container, Row, Col } from 'react-bootstrap';
 import './App.css';
 import Typography from './Typography/Typography';
-import Drawer from './Drawer/Drawer';
+import Drawer from './components/Drawer/Drawer';
 
 function App() {
   const [open, setOpen] = useState(false);

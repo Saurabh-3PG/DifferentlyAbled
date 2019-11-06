@@ -1,7 +1,14 @@
 
 import React, { Component } from 'react';
-import logo from './../logo.svg';
+import logo from '../../logo.svg';
 import { Navbar, Button, Collapse, Container, Row, Col } from 'react-bootstrap';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import { Dropdown } from "../Dropdown";  
 
 class Drawer extends Component {
     render(props) {
@@ -10,6 +17,31 @@ class Drawer extends Component {
                 <Container>
                     <Row>
                         <Col>
+                        <Router>
+                            <div>
+                                <ul>
+                                <li>
+                                    <Link to="/">Dropdown</Link>
+                                </li>
+                                </ul>
+
+                                <Switch>
+                                <Route exact path="/">
+                                <Dropdown label='Dropdown'>
+                                    <option value={0}> { 'Option 1' }</option>
+                                    <option value={1}>{ 'Option 2' }</option>
+                                </Dropdown>
+                                </Route>
+                                {/* <Route path="/about">
+                                    <About />
+                                </Route>
+                                <Route path="/dashboard">
+                                    <Dashboard />
+                                </Route> */}
+                                </Switch>
+                            </div>
+                            </Router>
+
                             <ul>
                                 <li>
                                     <a href>
