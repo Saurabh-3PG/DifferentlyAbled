@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import { Dropdown } from "../components/Dropdown";
 import Slider from "../components/Slider";
+import './HomePage.css';
+
 class HomePage extends React.Component {
     render(props) {
         return (
