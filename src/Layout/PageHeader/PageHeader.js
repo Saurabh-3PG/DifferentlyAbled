@@ -9,7 +9,7 @@ class PageHeader extends Component {
         };
     }
     showComponents() {
-        console.log(this.props, 'props')
+        document.querySelector(this.props.mainContainer).setAttribute('tabindex', '-1');
         document.querySelector(this.props.mainContainer).focus();
     }
     render(props) {

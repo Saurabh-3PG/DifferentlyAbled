@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import {
     BrowserRouter as Router,
     Switch,
@@ -8,45 +8,51 @@ import {
 } from "react-router-dom";
 import { Dropdown } from "../components/Dropdown";
 import Slider from "../components/Slider";
+import Typography from "../components/Typography";
 import './HomePage.css';
 
 class HomePage extends React.Component {
     render(props) {
         return (
-            <Container id="main" tabIndex="-1">
-            <Router>
-                <Row>
-                    <Col sm={4}>
-                        
-                            <div>
-                                <ul>
-                                    <li>
+            <main className="focus" id="main">
+                <Container fluid>
+                    <Router>
+                        <Row>
+                            <Col className="margin-top" sm={3}>
+                                <ListGroup>
+                                    <ListGroup.Item>
                                         <Link to="/">Dropdown</Link>
-                                    </li>
-                                    <li>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
                                         <Link to="/Slider">Slider</Link>
-                                    </li>
-                                </ul>
-                            </div>
-                    </Col>
-                    <Col sm={8}>
-                        <Switch>
-                            <Route exact path="/">
-                                <Dropdown label='Dropdown'>
-                                    <option value={0}> {'Option 1'}</option>
-                                    <option value={1}>{'Option 2'}</option>
-                                </Dropdown>
-                            </Route>
-                            <Route path="/Slider">
-                                <Slider label={'Slider'} min={0} max={10}
-                                    ariaLabel={'Slider sample'}
-                                />
-                            </Route>
-                        </Switch>
-                    </Col>
-                </Row>
-                </Router>
-            </Container>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Link to="/Typography">Typography</Link>
+                                    </ListGroup.Item>
+                                </ListGroup>
+                            </Col>
+                            <Col className="margin-top" sm={9} id="main-container">
+                                <Switch>
+                                        <Route exact path="/">
+                                            <Dropdown label='Dropdown'>
+                                                <option value={0}> {'Option 1'}</option>
+                                                <option value={1}>{'Option 2'}</option>
+                                            </Dropdown>
+                                        </Route>
+                                        <Route path="/Slider">
+                                            <Slider label={'Slider'} min={0} max={10}
+                                                ariaLabel={'Slider sample'}
+                                            />
+                                        </Route>
+                                        <Route path="/Typography">
+                                            <Typography />
+                                        </Route>
+                                </Switch>
+                            </Col>
+                        </Row>
+                    </Router>
+                </Container>
+            </main>
         );
     }
 }

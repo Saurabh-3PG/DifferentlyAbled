@@ -71,13 +71,12 @@ export class Dropdown extends React.Component {
   }
 
   render () {
-    return <div className='select custom-select'>
+    return (
       <select className={this.props.customClass ? (`${this.props.customClass} form-control`) : 'form-control'}
         onChange={this.handleChange}
         value={this.props.hasOwnProperty('value') ? this.props.value : this.state.value}
         disabled={this.props.disabled ? 'disabled' : ''}
         tabIndex='0'
-        role='listbox'
         // aria-label={`${this.props.label}, ${this.props.tooltip} `}
         aria-label={`${this.props.label}`}
         // data-tip data-for={`tooltip-${this.props.name}`} data-event='focus' data-event-off='keydown blur'
@@ -85,7 +84,7 @@ export class Dropdown extends React.Component {
       >
         { this.buildMenu() }
       </select>
-    </div>;
+    );
   }
 }
 
