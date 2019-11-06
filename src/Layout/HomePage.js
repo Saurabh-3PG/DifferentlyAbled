@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import './HomePage.css';
 
 class HomePage extends React.Component {
     render(props) {
