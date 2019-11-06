@@ -21,6 +21,7 @@ code {
     margin: auto;
     padding: 48px 76px;
     overflow: scroll;
+    background: white;
 }
 #nav-drawer ul {
   padding: 0;
