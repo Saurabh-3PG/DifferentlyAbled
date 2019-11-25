@@ -1,12 +1,6 @@
 #main{
     padding: 80px 40px; 
 }
-.focus{
-    border: 5px solid transparent;
-}
-.focus:focus{
-    border-color: rgb(0, 123, 255);
-}
 #main img{
     max-width: 100%;
 }
