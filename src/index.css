@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* Utility class */
+.margin-bottom{
+  margin-bottom: 60px;
+}
+.focus{
+    border: 5px solid transparent;
+}
+.focus:focus{
+    border-color: rgb(0, 123, 255);
+}
