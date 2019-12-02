@@ -6,7 +6,7 @@ import headingUsinghTag from '../../Images/heading-using-hTag.png';
 import paragraph from '../../Images/paragraph.png';
 import listdefault from '../../Images/list-hTag.png';
 
-class Typography extends React.Component {
+export class Typography extends React.Component {
 
     render(props) {
         return (
@@ -58,4 +58,3 @@ class Typography extends React.Component {
         );
     }
 }
-export default Typography;

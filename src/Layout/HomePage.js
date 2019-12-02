@@ -6,9 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import { Dropdown } from "../components/Dropdown";
-import Slider from "../components/Slider";
-import Typography from "../components/Typography";
+import { Dropdown, Slider, Typography, Checkbox } from "../components";
 import './HomePage.css';
 import { Lang } from '../Lang/Lang.js';
 import Details from './Details';
@@ -39,6 +37,9 @@ class HomePage extends React.Component {
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <Link to="/Slider">Slider</Link>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Link to="/Checkbox">Checkbox</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <Link to="/Typography">Typography</Link>
@@ -99,6 +100,9 @@ class HomePage extends React.Component {
                                                 GitLink={Lang.slider.GitLink}
                                             />
                                             <hr />
+                                        </Route>
+                                        <Route path="/Checkbox">
+                                            <Checkbox id='chkSample' label='Sample checkbox'/>
                                         </Route>
                                         <Route path="/Typography">
                                             <Typography />

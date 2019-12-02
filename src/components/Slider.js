@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Slider extends React.Component {
+export class Slider extends React.Component {
   static propTypes = {
     step: PropTypes.number,
     name: PropTypes.string,
@@ -69,5 +69,3 @@ class Slider extends React.Component {
     </div>;
   }
 }
-
-export default Slider;
