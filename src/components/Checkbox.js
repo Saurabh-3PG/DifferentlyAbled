@@ -19,7 +19,7 @@ export class Checkbox extends React.PureComponent {
 
   render() {
     const { id, checked, label } = this.props;
-
+    this.setState.checked = checked
     return (
       <label>
         <input

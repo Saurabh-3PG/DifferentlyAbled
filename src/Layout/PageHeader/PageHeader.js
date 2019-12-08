@@ -1,34 +1,27 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
-import { Navbar} from 'react-bootstrap';
-
+import { Container, Row, Col} from 'react-bootstrap';
+//lang
+import { Lang } from '../../Lang/Lang';
 class PageHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {
         };
     }
-    showComponents() {
-        document.querySelector(this.props.mainContainer).setAttribute('tabindex', '-1');
-        document.querySelector(this.props.mainContainer).focus();
-    }
     render(props) {
 
         return (
-                <header>
-                    <Navbar bg="dark" variant="dark" fixed="top">
-                    <Navbar.Brand tabIndex="0" onClick={this.showComponents.bind(this)} onKeyDown={this.showComponents.bind(this)}>
-                            <img
-                                alt=""
-                                src={logo}
-                                width="30"
-                                height="30"
-                                className="d-inline-block align-top"
-                            />
-                            {' Skip to main content'}
-                        </Navbar.Brand>
-                    </Navbar>
-                </header>
+            <header>
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1>
+                                {Lang.default.heading}
+                            </h1>
+                        </Col>
+                    </Row>
+                </Container>
+            </header>
         );
     }
 }
