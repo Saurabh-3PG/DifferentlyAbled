@@ -9,6 +9,7 @@ import {
 import { Dropdown, Slider, Typography, Checkbox } from "../components";
 //Modules
 import { InputPage } from "./InputPage";
+import { TextareaPage } from "./TextareaPage";
 //lang
 import { Lang } from '../Lang/Lang.js';
 //layout
@@ -49,6 +50,9 @@ class HomePage extends React.Component {
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <Link to="/Input">Input [type="text"]</Link>
+                                    </ListGroup.Item>
+                                    <ListGroup.Item>
+                                        <Link to="/Textarea">TextareaPage</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <Link to="/Typography">Typography</Link>
@@ -104,6 +108,9 @@ class HomePage extends React.Component {
                                         </Route>
                                         <Route path="/Input">
                                             <InputPage />
+                                        </Route>
+                                        <Route path="/Textarea">
+                                            <TextareaPage />
                                         </Route>
                                         <Route path="/Typography">
                                             <Typography />
