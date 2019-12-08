@@ -24,6 +24,17 @@ export const Lang = {
                     "tip": "Every form field should be connected to label properly"
                 }
             ]
+        },
+        "Textarea": {
+            "heading": "Textarea",
+            "subheading": "",
+            "maindiscription": "",
+            "GitLink": "",
+            "AccessiblityTips": [
+                {
+                    "tip": "Every form field should be connected to label properly"
+                }
+            ]
         }
     },
     "components": {

@@ -11,6 +11,7 @@ export class Input extends React.Component {
             <div>
                 <hr />
                 <label htmlFor={id}>Explicitly labeled {label}</label>
+                <br />
                 <input 
                     id={id} 
                     type="text" 
@@ -22,6 +23,7 @@ export class Input extends React.Component {
                 <hr />
                 <label>
                     Implicitly labeled {label}
+                    <br />
                 <input
                     type="text"
                     name={id}
