@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Row, Col, Tabs, Tab } from 'react-bootstrap';
-import { Lang } from '../Lang/Lang.js';
-import PageIntro from './PageIntro';
+import { Lang } from '../../Lang/Lang.js';
+import PageIntro from '../PageIntro';
 
 class Details extends React.Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class Details extends React.Component {
                     paragraph={this.props.paragraph}
                 />
                 <hr />
-                <div>
+                <div className="skdjaklsdjkalsjdkldsa">
                     <b><i>{Lang.default.AccessiblityTips}</i></b>
                 </div>
                 <ul>

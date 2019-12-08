@@ -21,3 +21,17 @@ code {
 .focus:focus{
     border-color: rgb(0, 123, 255);
 }
+img{
+    max-width: 100%;
+}
+header {
+    margin: 16px auto;
+    padding: 24px 0;
+    background: rgb(238, 238, 238);
+    font-size: 51px;
+}
+@media (min-width: 1200px){
+  .container {
+      max-width: 1400px;
+  }
+}
