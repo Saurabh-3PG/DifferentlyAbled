@@ -7,24 +7,30 @@ export class Checkbox extends React.PureComponent {
     this.state = {
       checked: props.checked || false
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = e => {
-    console.log(e.target.checked);
-    this.setState({checked: !e.target.checked});
-    if(this.props.onChange) {
-      this.props.onChange(!e.target.checked);
-    }
-  };
+  handleChange(event) {
+    event.preventDefault();
+    const isChecked = event.target.checked;
+    this.setState({
+      checked: isChecked
+    }, () => {
+      if(this.props.onChange) {
+        this.props.onChange(!isChecked);
+      }
+    });
+  }
 
   render() {
-    const { id, checked, label } = this.props;
-
+    const { id, label } = this.props;
+    console.log('checkbox render');
     return (
       <label>
         <input
           id={id}
           type="checkbox"
+          name="test"
           checked={this.state.checked}
           aria-checked={this.state.checked}
           onChange={this.handleChange}

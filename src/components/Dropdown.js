@@ -77,10 +77,7 @@ export class Dropdown extends React.Component {
         value={this.props.hasOwnProperty('value') ? this.props.value : this.state.value}
         disabled={this.props.disabled ? 'disabled' : ''}
         tabIndex='0'
-        // aria-label={`${this.props.label}, ${this.props.tooltip} `}
         aria-label={`${this.props.label}`}
-        // data-tip data-for={`tooltip-${this.props.name}`} data-event='focus' data-event-off='keydown blur'
-        // data-offset={`{'top': ${this.props.tooltipOffset || 10}}`}
       >
         { this.buildMenu() }
       </select>
