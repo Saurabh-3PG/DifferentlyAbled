@@ -4,6 +4,11 @@ import { Row, Col } from 'react-bootstrap';
 import { Lang } from '../Lang/Lang.js';
 //components
 import { Input } from "../components/Input";
+import Details from '../Layout/Details';
+// checkbox images
+import inputText_Html from '../Images/inputText/Html.png';
+import inputText_ReactJs from '../Images/inputText/ReactJs.png';
+import inputText_RenderedHTML from '../Images/inputText/RenderedHTML.png';
 
 export class InputPage extends React.Component {
     constructor(props) {
@@ -15,7 +20,18 @@ export class InputPage extends React.Component {
         return (
             <Row>
                 <Col>
-                    <Input id="inputText" label={Lang.modules.InputPage.heading}></Input>
+                    <Input id="inputText" label={this.props.label} />
+                    <hr />
+                    <Details
+                        heading={Lang.modules.inputText.heading}
+                        subheading={Lang.modules.inputText.subheading}
+                        paragraph={Lang.modules.inputText.maindiscription}
+                        AccessiblityTips={Lang.modules.inputText.AccessiblityTips}
+                        CodeExampleHtml={inputText_Html}
+                        CodeExampleReactJs={inputText_ReactJs}
+                        RenderedHTML={inputText_RenderedHTML}
+                        GitLink={Lang.modules.inputText.GitLink}
+                    />
                 </Col>
             </Row>
         );

@@ -272,31 +272,6 @@ export const Lang = {
         }
     },
     modules: {
-        "InputPage": {
-            "heading": "Input type[text]",
-            "subheading": "",
-            "maindiscription": "",
-            "GitLink": "",
-            "AccessiblityTips": [
-                {
-                    "tip": "Every form field should be connected to label properly"
-                }
-            ]
-        },
-        "Textarea": {
-            "heading": "Textarea",
-            "subheading": "",
-            "maindiscription": "",
-            "GitLink": "",
-            "AccessiblityTips": [
-                {
-                    "tip": "Every form field should be connected to label properly"
-                }
-            ]
-        }
-    },
-    components: {
-
         "dropdown": {
             "heading": "Dropdown",
             "subheading": "Grouping items in select elements",
@@ -336,7 +311,42 @@ export const Lang = {
                     "tip": "Use Axe or any other html validator for WCGA Standard "
                 }
             ]
-        }
+        },
+        "checkbox": {
+            "heading": "Checkbox",
+            "subheading": "sub heading",
+            "maindiscription": "main discription",
+            "GitLink": "GitLink",
+            "AccessiblityTips": [
+                {
+                    "tip": "Every form field should be connected to label properly"
+                }
+            ]
+        },
+        "inputText": {
+            "heading": "Input type[text]",
+            "subheading": "subheading",
+            "maindiscription": "maindiscription",
+            "GitLink": "GitLink",
+            "AccessiblityTips": [
+                {
+                    "tip": "Every form field should be connected to label properly"
+                }
+            ]
+        },
+        "textarea": {
+            "heading": "Textarea",
+            "subheading": "subheading",
+            "maindiscription": "maindiscription",
+            "GitLink": "GitLink",
+            "AccessiblityTips": [
+                {
+                    "tip": "Every form field should be connected to label properly"
+                }
+            ]
+        },
+    },
+    components: {
 
     }
 };

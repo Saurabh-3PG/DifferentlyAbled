@@ -23,6 +23,10 @@ import dropdownRenderedHTML from '../Images/dropdown/RenderedHTML.png';
 import sliderHtml from '../Images/slider/Html.png';
 import sliderReactJs from '../Images/slider/ReactJs.png';
 import sliderRenderedHTML from '../Images/slider/RenderedHTML.png';
+// checkbox images
+import checkbox_Html from '../Images/checkbox/Html.png';
+import checkbox_ReactJs from '../Images/checkbox/ReactJs.png';
+import checkbox_RenderedHTML from '../Images/checkbox/RenderedHTML.png';
 
 class HomePage extends React.Component {
     componentDidMount() {
@@ -52,7 +56,7 @@ class HomePage extends React.Component {
                                         <Link to="/Input">Input [type="text"]</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Textarea">TextareaPage</Link>
+                                        <Link to="/Textarea">Textarea</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
                                         <Link to="/Typography">Typography</Link>
@@ -73,14 +77,14 @@ class HomePage extends React.Component {
                                             </Dropdown>
                                             <hr />
                                             <Details
-                                                heading={Lang.components.dropdown.heading} 
-                                                subheading={Lang.components.dropdown.subheading} 
-                                                paragraph={Lang.components.dropdown.maindiscription} 
-                                                AccessiblityTips={Lang.components.dropdown.AccessiblityTips}
+                                                heading={Lang.modules.dropdown.heading} 
+                                                subheading={Lang.modules.dropdown.subheading} 
+                                                paragraph={Lang.modules.dropdown.maindiscription} 
+                                                AccessiblityTips={Lang.modules.dropdown.AccessiblityTips}
                                                 CodeExampleHtml={dropdownHtml}
                                                 CodeExampleReactJs={dropdownReactJs}
                                                 RenderedHTML={dropdownRenderedHTML}
-                                                GitLink={Lang.components.dropdown.GitLink}
+                                                GitLink={Lang.modules.dropdown.GitLink}
                                             />
                                             <hr />
                                         </Route>
@@ -91,19 +95,31 @@ class HomePage extends React.Component {
                                             />
                                             <hr />
                                             <Details
-                                                heading={Lang.components.slider.heading} 
-                                                subheading={Lang.components.slider.subheading} 
-                                                paragraph={Lang.components.slider.maindiscription} 
-                                                AccessiblityTips={Lang.components.slider.AccessiblityTips}
+                                                heading={Lang.modules.slider.heading} 
+                                                subheading={Lang.modules.slider.subheading} 
+                                                paragraph={Lang.modules.slider.maindiscription} 
+                                                AccessiblityTips={Lang.modules.slider.AccessiblityTips}
                                                 CodeExampleHtml={sliderHtml}
                                                 CodeExampleReactJs={sliderReactJs}
                                                 RenderedHTML={sliderRenderedHTML}
-                                                GitLink={Lang.components.slider.GitLink}
+                                                GitLink={Lang.modules.slider.GitLink}
                                             />
                                             <hr />
                                         </Route>
                                         <Route path="/Checkbox">
+                                            <hr />
                                             <Checkbox id='chkSample' label='Sample checkbox'/>
+                                            <hr />
+                                            <Details
+                                                heading={Lang.modules.checkbox.heading}
+                                                subheading={Lang.modules.checkbox.subheading}
+                                                paragraph={Lang.modules.checkbox.maindiscription}
+                                                AccessiblityTips={Lang.modules.checkbox.AccessiblityTips}
+                                                CodeExampleHtml={checkbox_Html}
+                                                CodeExampleReactJs={checkbox_ReactJs}
+                                                RenderedHTML={checkbox_RenderedHTML}
+                                                GitLink={Lang.modules.checkbox.GitLink}
+                                            />
                                         </Route>
                                         <Route path="/Input">
                                             <InputPage />
