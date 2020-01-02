@@ -64,7 +64,6 @@ class HomePage extends React.Component {
                                 <Switch>
                                         <Route exact path="/">
                                             <Introduction />
-                                            <h1 title="Hooray! When someone describes a site as accessible, they mean that any user can use all its features and content, regardless of how the user accesses the web even and especially users with physical or mental impairments.">Hover</h1>
                                         </Route>
                                         <Route exact path="/Dropdown">
                                             <hr />
