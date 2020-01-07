@@ -5,6 +5,7 @@ import { Lang } from '../Lang/Lang.js';
 //components
 import { Textarea } from "../components/Textarea";
 import Details from '../Layout/Details';
+import PageIntro from '../Layout/PageIntro';
 // checkbox images
 import textarea_Html from '../Images/textarea/Html.png';
 import textarea_ReactJs from '../Images/textarea/ReactJs.png';
@@ -20,19 +21,25 @@ export class TextareaPage extends React.Component {
         return (
             <Row>
                 <Col>
-                    <Textarea id="textarea" ariaId="aria_textarea" label={Lang.modules.textarea.heading}></Textarea>
-                    <hr />
-                    <Details
+                    <PageIntro
                         heading={Lang.modules.textarea.heading}
                         subheading={Lang.modules.textarea.subheading}
                         paragraph={Lang.modules.textarea.maindiscription}
+                    />
+                    <Textarea id="textarea" ariaId="aria_textarea" label={Lang.modules.textarea.heading}></Textarea>
+                    <hr />
+                    <Details module="textarea" default="default"
+                        CodeExampleHtml={textarea_Html}
+                        CodeExampleReactJs={textarea_ReactJs}
+                        RenderedHTML={textarea_RenderedHTML}
+                    />
+                    {/* <Details
                         AccessiblityTips={Lang.modules.textarea.AccessiblityTips}
                         CodeExampleHtml={textarea_Html}
                         CodeExampleReactJs={textarea_ReactJs}
                         RenderedHTML={textarea_RenderedHTML}
                         GitLink={Lang.modules.textarea.GitLink}
-                        
-                    />
+                    /> */}
                 </Col>
             </Row>
         );

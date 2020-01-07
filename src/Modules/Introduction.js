@@ -12,55 +12,55 @@ class Introduction extends React.Component {
         };
     }
     render(props) {
-        console.log('Lang.default.Home.levelA.table', Lang.default.Home.standards.levelA.table);
+        console.log('Lang.modules.home.levelA.table', Lang.modules.home.standards.levelA.table);
         return (
             <Row>
                 <Col>
                     <hr />
                     <PageIntro
-                        heading={Lang.default.Home.heading}
-                        subheading={Lang.default.Home.subheading}
-                        paragraph={Lang.default.Home.discription}
-                        list={Lang.default.Home.typeOfDisabilities}
+                        heading={Lang.modules.home.heading}
+                        subheading={Lang.modules.home.subheading}
+                        paragraph={Lang.modules.home.discription}
+                        list={Lang.modules.home.typeOfDisabilities}
                     />
                     <hr />
                     <div className="discriptions margin-bottom">
                         <PageIntro
-                            sec_heading={Lang.default.Home.guideline.heading}
-                            subheading={Lang.default.Home.guideline.subheading}
-                            paragraph={Lang.default.Home.guideline.discription}
-                            list={Lang.default.Home.guideline.principle}
+                            sec_heading={Lang.modules.home.guideline.heading}
+                            subheading={Lang.modules.home.guideline.subheading}
+                            paragraph={Lang.modules.home.guideline.discription}
+                            list={Lang.modules.home.guideline.principle}
                         />
                         <hr />
                         <PageIntro
-                            sec_heading={Lang.default.Home.levelsOfConformance.heading}
-                            subheading={Lang.default.Home.levelsOfConformance.subheading}
-                            paragraph={Lang.default.Home.levelsOfConformance.discription}
-                            list={Lang.default.Home.levelsOfConformance.principle}
+                            sec_heading={Lang.modules.home.levelsOfConformance.heading}
+                            subheading={Lang.modules.home.levelsOfConformance.subheading}
+                            paragraph={Lang.modules.home.levelsOfConformance.discription}
+                            list={Lang.modules.home.levelsOfConformance.principle}
                         />
                         <hr />
                         <PageIntro
-                            sec_heading={Lang.default.Home.bestPractices.heading}
-                            subheading={Lang.default.Home.bestPractices.subheading}
-                            paragraph={Lang.default.Home.bestPractices.discription}
-                            list={Lang.default.Home.bestPractices.principle}
+                            sec_heading={Lang.modules.home.bestPractices.heading}
+                            subheading={Lang.modules.home.bestPractices.subheading}
+                            paragraph={Lang.modules.home.bestPractices.discription}
+                            list={Lang.modules.home.bestPractices.principle}
                         />
                         <hr />
                         <PageIntro
-                            sec_heading={Lang.default.Home.manualAccessibility.heading}
-                            subheading={Lang.default.Home.manualAccessibility.subheading}
-                            paragraph={Lang.default.Home.manualAccessibility.discription}
-                            list={Lang.default.Home.manualAccessibility.waysToTest}
+                            sec_heading={Lang.modules.home.manualAccessibility.heading}
+                            subheading={Lang.modules.home.manualAccessibility.subheading}
+                            paragraph={Lang.modules.home.manualAccessibility.discription}
+                            list={Lang.modules.home.manualAccessibility.waysToTest}
                         />
                         <hr />
                         <PageIntro
-                            sec_heading={Lang.default.Home.standards.levelA.heading}
-                            table={Lang.default.Home.standards.levelA.table}
+                            sec_heading={Lang.modules.home.standards.levelA.heading}
+                            table={Lang.modules.home.standards.levelA.table}
                         />
                         <hr />
                         <PageIntro
-                            sec_heading={Lang.default.Home.standards.levelAA.heading}
-                            table={Lang.default.Home.standards.levelAA.table}
+                            sec_heading={Lang.modules.home.standards.levelAA.heading}
+                            table={Lang.modules.home.standards.levelAA.table}
                         />
                     </div>
                     {/* others */}

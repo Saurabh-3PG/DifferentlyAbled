@@ -15,6 +15,7 @@ import { Lang } from '../Lang/Lang.js';
 //layout
 import Introduction from './Introduction';
 import Details from '../Layout/Details';
+import PageIntro from '../Layout/PageIntro';
 // dropdown images
 import dropdownHtml from '../Images/dropdown/Html.png';
 import dropdownReactJs from '../Images/dropdown/ReactJs.png';
@@ -38,96 +39,96 @@ class HomePage extends React.Component {
                 <Container>
                     <Router>
                         <Row>
-                            <Col className="margin-top" sm={3}>
+                            <Col className="margin-top" md={3}>
                                 <ListGroup>
                                     <ListGroup.Item>
                                         <Link to="/">Introduction</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Dropdown">Dropdown</Link>
+                                        <Link to="/dropdown">Dropdown</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Slider">Slider</Link>
+                                        <Link to="/slider">Slider</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Checkbox">Checkbox</Link>
+                                        <Link to="/checkbox">Checkbox</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Input">Input [type="text"]</Link>
+                                        <Link to="/textInput">Text Input</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Textarea">Textarea</Link>
+                                        <Link to="/textarea">Textarea</Link>
                                     </ListGroup.Item>
                                     <ListGroup.Item>
-                                        <Link to="/Typography">Typography</Link>
+                                        <Link to="/typography">Typography</Link>
                                     </ListGroup.Item>
                                 </ListGroup>
                             </Col>
-                            <Col sm={9} id="main-container">
+                            <Col md={9} id="main-container">
                                 <main id="">
                                 <Switch>
                                         <Route exact path="/">
                                             <Introduction />
                                         </Route>
-                                        <Route exact path="/Dropdown">
+                                        <Route exact path="/dropdown">
+                                            <PageIntro
+                                                heading={Lang.modules.dropdown.heading}
+                                                subheading={Lang.modules.dropdown.subheading}
+                                                paragraph={Lang.modules.dropdown.maindiscription}
+                                            />
                                             <hr />
                                             <Dropdown label='Dropdown'>
                                                 <option value={0}> {'Option 1'}</option>
                                                 <option value={1}>{'Option 2'}</option>
                                             </Dropdown>
                                             <hr />
-                                            <Details
-                                                heading={Lang.modules.dropdown.heading} 
-                                                subheading={Lang.modules.dropdown.subheading} 
-                                                paragraph={Lang.modules.dropdown.maindiscription} 
-                                                AccessiblityTips={Lang.modules.dropdown.AccessiblityTips}
+                                            <Details module="dropdown" default="default"
                                                 CodeExampleHtml={dropdownHtml}
                                                 CodeExampleReactJs={dropdownReactJs}
                                                 RenderedHTML={dropdownRenderedHTML}
-                                                GitLink={Lang.modules.dropdown.GitLink}
                                             />
                                             <hr />
                                         </Route>
-                                        <Route path="/Slider">
+                                        <Route path="/slider">
+                                            <PageIntro
+                                                heading={Lang.modules.slider.heading}
+                                                subheading={Lang.modules.slider.subheading}
+                                                paragraph={Lang.modules.slider.maindiscription} 
+                                            />
                                             <hr />
                                             <Slider label={'Slider'} min={0} max={10}
                                                 ariaLabel={'Slider sample'}
                                             />
                                             <hr />
-                                            <Details
-                                                heading={Lang.modules.slider.heading} 
-                                                subheading={Lang.modules.slider.subheading} 
-                                                paragraph={Lang.modules.slider.maindiscription} 
-                                                AccessiblityTips={Lang.modules.slider.AccessiblityTips}
+                                            <Details module="slider" default="default"
                                                 CodeExampleHtml={sliderHtml}
                                                 CodeExampleReactJs={sliderReactJs}
                                                 RenderedHTML={sliderRenderedHTML}
-                                                GitLink={Lang.modules.slider.GitLink}
                                             />
                                             <hr />
                                         </Route>
-                                        <Route path="/Checkbox">
-                                            <hr />
-                                            <Checkbox id='chkSample' label='Sample checkbox'/>
-                                            <hr />
-                                            <Details
+                                        <Route path="/checkbox">
+                                            <PageIntro
                                                 heading={Lang.modules.checkbox.heading}
                                                 subheading={Lang.modules.checkbox.subheading}
                                                 paragraph={Lang.modules.checkbox.maindiscription}
-                                                AccessiblityTips={Lang.modules.checkbox.AccessiblityTips}
+                                            />
+                                            <hr />
+                                            <Checkbox id='chkSample' label='Sample checkbox'/>
+                                            <hr />
+                                            <Details module="checkbox" default="default"
                                                 CodeExampleHtml={checkbox_Html}
                                                 CodeExampleReactJs={checkbox_ReactJs}
                                                 RenderedHTML={checkbox_RenderedHTML}
-                                                GitLink={Lang.modules.checkbox.GitLink}
                                             />
                                         </Route>
-                                        <Route path="/Input">
+                                        <Route path="/textInput">
                                             <InputPage />
                                         </Route>
-                                        <Route path="/Textarea">
+                                        <Route path="/textarea">
                                             <TextareaPage />
                                         </Route>
-                                        <Route path="/Typography">
+                                        <Route path="/typography">
                                             <Typography />
                                         </Route>
                                 </Switch>

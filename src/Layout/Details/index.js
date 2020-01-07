@@ -1,47 +1,26 @@
 import React from 'react';
 import { Image, Row, Col, Tabs, Tab } from 'react-bootstrap';
 import { Lang } from '../../Lang/Lang.js';
-import PageIntro from '../PageIntro';
-
 class Details extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            moduleDetails: Lang.modules[this.props.module],
+            default: Lang[this.props.default]
         };
     }
     render(props) {
         return (
             <div id="details">
-                <PageIntro 
-                    heading={this.props.heading}
-                    subheading={this.props.subheading}
-                    paragraph={this.props.paragraph}
-                />
-                <hr />
-                <div className="skdjaklsdjkalsjdkldsa">
-                    <b><i>{Lang.default.AccessiblityTips}</i></b>
-                </div>
-                <ul>
-                    {
-                        this.props.AccessiblityTips.map(AccessiblityTips => {
-                            return (
-                                <li key={AccessiblityTips.tip}>
-                                    {AccessiblityTips.tip}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-                <hr />
-                <Row className="margin-bottom">
+                 <Row className="margin-bottom">
                     <Col>
-                        <h2><i>{Lang.default.CodeExample}</i></h2>
+                        <h2><i>{this.state.default.CodeExample}</i></h2>
                         <Tabs defaultActiveKey="Html" transition={false}>
                             <Tab eventKey="Html" title="Html">
-                                <Image src={this.props.CodeExampleHtml} alt={Lang.default.CodeExample} />
+                                <Image src={this.props.CodeExampleHtml} alt={this.state.default.CodeExample} />
                             </Tab>
                             <Tab eventKey="ReactJs" title="ReactJs">
-                                <Image src={this.props.CodeExampleReactJs} alt={Lang.default.CodeExample} />
+                                <Image src={this.props.CodeExampleReactJs} alt={this.state.default.CodeExample} />
                             </Tab>
                         </Tabs>
                     </Col>
@@ -49,15 +28,38 @@ class Details extends React.Component {
                 <hr />
                 <Row className="margin-bottom">
                     <Col>
-                        <h3><i>{Lang.default.RenderedHTML}</i></h3>
-                        <Image src={this.props.RenderedHTML} alt={Lang.default.RenderedHTML} />
+                        <h3><i>{this.state.default.RenderedHTML}</i></h3>
+                        <Image src={this.props.RenderedHTML} alt={this.state.default.RenderedHTML} />
                     </Col>
                 </Row>
                 <hr />
+                <div>
+                    <h3>{this.state.moduleDetails.accessiblity.heading}</h3>
+                </div>
+                <hr />
+                {
+                    this.state.moduleDetails.accessiblity.tips.map(tips => {
+                        return (
+                            <div>
+                                <div><b><i>{tips.for}</i></b></div>
+                                <ol>
+                                    {
+                                        tips.steps.map(steps => {
+                                            return (
+                                                <li>{steps.step}</li>
+                                            )
+                                        })
+                                    }
+                                </ol>
+                            </div>
+                        )
+                    })
+                }
+                <hr />
                 <Row className="margin-bottom">
                     <Col>
-                        <h3><i>{Lang.default.GitLink}</i></h3>
-                        <a href={this.props.GitLink}>{this.props.GitLink}</a>
+                        <h3><i>{this.state.default.GitLink}</i></h3>
+                        <a href={this.state.moduleDetails.GitLink} target="_blank" rel="noopener noreferrer">{this.state.moduleDetails.GitLink}</a>
                     </Col>
                 </Row>
             </div>

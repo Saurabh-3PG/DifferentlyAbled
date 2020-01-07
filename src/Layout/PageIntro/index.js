@@ -12,7 +12,7 @@ class PageIntro extends React.Component {
     render(props) {
         let heading = <h1>{this.props.heading}</h1>;
         let sec_heading = <h2>{this.props.sec_heading}</h2>;
-        let subheading = <div><b><i>{this.props.subheading}</i></b></div>;
+        let subheading = <div><i>{this.props.subheading}</i></div>;
         let paragraph = <p>{this.props.paragraph}</p>;
         let list, table = null
         if (this.props.list){
@@ -42,6 +42,7 @@ class PageIntro extends React.Component {
                     {this.props.heading ? heading : null}
                     {this.props.sec_heading ? sec_heading : null}
                     {this.props.subheading ? subheading : null}
+                    <br />
                     {this.props.paragraph ? paragraph : null}
                     {list}
                     {table}
