@@ -14,7 +14,7 @@ class Details extends React.Component {
             <div id="details">
                  <Row className="margin-bottom">
                     <Col>
-                        <h2><i>{this.state.default.CodeExample}</i></h2>
+                        <h2><i dangerouslySetInnerHTML={{ __html: this.state.default.CodeExample }} /></h2>
                         <Tabs defaultActiveKey="Html" transition={false}>
                             <Tab eventKey="Html" title="Html">
                                 <Image src={this.props.CodeExampleHtml} alt={this.state.default.CodeExample} />
@@ -28,13 +28,13 @@ class Details extends React.Component {
                 <hr />
                 <Row className="margin-bottom">
                     <Col>
-                        <h3><i>{this.state.default.RenderedHTML}</i></h3>
+                        <h3><i dangerouslySetInnerHTML={{ __html: this.state.default.RenderedHTML }} /></h3>
                         <Image src={this.props.RenderedHTML} alt={this.state.default.RenderedHTML} />
                     </Col>
                 </Row>
                 <hr />
                 <div>
-                    <h3>{this.state.moduleDetails.accessiblity.heading}</h3>
+                    <h3 dangerouslySetInnerHTML={{ __html: this.state.moduleDetails.accessiblity.heading }}/>
                 </div>
                 <hr />
                 {
@@ -46,7 +46,7 @@ class Details extends React.Component {
                                     {
                                         tips.steps.map(steps => {
                                             return (
-                                                <li>{steps.step}</li>
+                                                <li dangerouslySetInnerHTML={{ __html: steps.step }}/>
                                             )
                                         })
                                     }
@@ -58,8 +58,8 @@ class Details extends React.Component {
                 <hr />
                 <Row className="margin-bottom">
                     <Col>
-                        <h3><i>{this.state.default.GitLink}</i></h3>
-                        <a href={this.state.moduleDetails.GitLink} target="_blank" rel="noopener noreferrer">{this.state.moduleDetails.GitLink}</a>
+                        <h3><i dangerouslySetInnerHTML={{ __html: this.state.default.GitLink }} /></h3>
+                        <a href={this.state.moduleDetails.GitLink} target="_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html: this.state.moduleDetails.GitLink }} />
                     </Col>
                 </Row>
             </div>

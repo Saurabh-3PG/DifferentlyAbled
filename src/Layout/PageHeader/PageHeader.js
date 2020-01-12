@@ -15,9 +15,7 @@ class PageHeader extends Component {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>
-                                {Lang.default.heading}
-                            </h1>
+                            <h1 dangerouslySetInnerHTML={{ __html: Lang.default.heading }} />
                         </Col>
                     </Row>
                 </Container>

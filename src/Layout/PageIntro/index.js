@@ -8,18 +8,18 @@ class PageIntro extends React.Component {
         super(props);
         this.state = {
         };
-    }
+    } 
     render(props) {
-        let heading = <h1>{this.props.heading}</h1>;
-        let sec_heading = <h2>{this.props.sec_heading}</h2>;
-        let subheading = <div><i>{this.props.subheading}</i></div>;
-        let paragraph = <p>{this.props.paragraph}</p>;
+    let heading = <h1 dangerouslySetInnerHTML={{ __html: this.props.heading}} />;
+        let sec_heading = <h2 dangerouslySetInnerHTML={{ __html: this.props.sec_heading}} />;
+        let subheading = <div><i dangerouslySetInnerHTML={{ __html: this.props.subheading }}/></div>;
+        let paragraph = <p dangerouslySetInnerHTML={{ __html: this.props.paragraph}} />;
         let list, table = null
         if (this.props.list){
             list = <ul>{
                 this.props.list.map(list => {
                     return (
-                        <li key={list.item}>{list.item}</li>
+                        <li key={list.item} dangerouslySetInnerHTML={{ __html: list.item}} />
                     )
                 }
                 )}</ul>
@@ -29,8 +29,8 @@ class PageIntro extends React.Component {
                 this.props.table.map(table => {
                     return (
                         <tr className={table.class}>
-                            <td>{table.guideline}</td>
-                            <td>{table.summary}</td>
+                            <td dangerouslySetInnerHTML={{ __html: table.guideline }} />
+                            <td dangerouslySetInnerHTML={{ __html: table.summary }} />
                         </tr>
                     )
                 }
