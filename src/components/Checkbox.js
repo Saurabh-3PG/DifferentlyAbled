@@ -10,7 +10,7 @@ export class Checkbox extends React.PureComponent {
   }
 
   handleChange = e => {
-    console.log(e.target.checked);
+    // console.log(e.target.checked);
     this.setState({checked: !e.target.checked});
     if(this.props.onChange) {
       this.props.onChange(!e.target.checked);

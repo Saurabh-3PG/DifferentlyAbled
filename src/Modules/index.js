@@ -31,7 +31,7 @@ import checkbox_RenderedHTML from '../Images/checkbox/RenderedHTML.png';
 
 class HomePage extends React.Component {
     componentDidMount() {
-        console.log(Lang);
+        // console.log(Lang);
     }
     render(props) {
         return (

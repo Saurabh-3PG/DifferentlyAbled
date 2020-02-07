@@ -12,7 +12,7 @@ class Introduction extends React.Component {
         };
     }
     render(props) {
-        console.log('Lang.modules.home.levelA.table', Lang.modules.home.standards.levelA.table);
+        // console.log('Lang.modules.home.levelA.table', Lang.modules.home.standards.levelA.table);
         return (
             <Row>
                 <Col>

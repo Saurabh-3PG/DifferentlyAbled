@@ -12,6 +12,13 @@ class Details extends React.Component {
     render(props) {
         return (
             <div id="details">
+                <Row className="margin-bottom">
+                    <Col>
+                        <h3><i dangerouslySetInnerHTML={{ __html: this.state.default.RenderedHTML }} /></h3>
+                        <Image src={this.props.RenderedHTML} alt={this.state.default.RenderedHTML} />
+                    </Col>
+                </Row>
+                <hr />
                  <Row className="margin-bottom">
                     <Col>
                         <h2><i dangerouslySetInnerHTML={{ __html: this.state.default.CodeExample }} /></h2>
@@ -23,13 +30,6 @@ class Details extends React.Component {
                                 <Image src={this.props.CodeExampleReactJs} alt={this.state.default.CodeExample} />
                             </Tab>
                         </Tabs>
-                    </Col>
-                </Row>
-                <hr />
-                <Row className="margin-bottom">
-                    <Col>
-                        <h3><i dangerouslySetInnerHTML={{ __html: this.state.default.RenderedHTML }} /></h3>
-                        <Image src={this.props.RenderedHTML} alt={this.state.default.RenderedHTML} />
                     </Col>
                 </Row>
                 <hr />
