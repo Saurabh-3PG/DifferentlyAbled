@@ -37,19 +37,19 @@ export const Lang = {
             "guideline": {
                 "heading": "What are the Web Accessibility Guidelines?",
                 "subheading": "Web accessibility guidelines define how to make web content accessible to people with disabilities so that web content is available to all individuals. \n WCAG Web Content Accessibility Guidelines (WCAG)- It is developed through the World Wide Web Consortium (W3C) process in cooperation with individuals and organizations around the world, with a goal of providing a single shared standard for web content accessibility that meets the needs of individuals, organizations, and governments internationally.",
-                "discription": "Web Content Accessibility Guidelines 2.0- Web Content Accessibility Guidelines (WCAG) 2.0 defines how to make Web content more accessible to people with disabilities. There are four principles that provide the foundation for Web accessibility.",
+                "discription": "<b>Web Content Accessibility Guidelines 2.0-</b> Web Content Accessibility Guidelines (WCAG) 2.0 defines how to make Web content more accessible to people with disabilities. There are four principles that provide the foundation for Web accessibility.",
                 "principle": [
                     {
-                        "item": "Perceivable- Information and user interface components must be presentable to users in ways they can perceive. \n This means that users must be able to perceive the information being presented (it can't be invisible to all of their senses)."
+                        "item": "<b>Perceivable-</b> Information and user interface components must be presentable to users in ways they can perceive. \n This means that users must be able to perceive the information being presented (it can't be invisible to all of their senses)."
                     },
                     {
-                        "item": "Operable- User interface components and navigation must be operable. \n This means that users must be able to operate the interface (the interface cannot require interaction that a user cannot perform)."
+                        "item": "<b>Operable-</b> User interface components and navigation must be operable. \n This means that users must be able to operate the interface (the interface cannot require interaction that a user cannot perform)."
                     },
                     {
-                        "item": "Understandable- Information and the operation of user interface must be understandable. \n This means that users must be able to understand the information as well as the operation of the user interface (the content or operation cannot be beyond their understanding).                    "
+                        "item": "<b>Understandable-</b> Information and the operation of user interface must be understandable. \n This means that users must be able to understand the information as well as the operation of the user interface (the content or operation cannot be beyond their understanding).                    "
                     },
                     {
-                        "item": "Robust- Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies."
+                        "item": "<b>Robust-</b> Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies."
                     }
                 ],
             },
@@ -59,13 +59,13 @@ export const Lang = {
                 "discription": "",
                 "principle": [
                     {
-                        "item": "Level A- the most basic web accessibility features."
+                        "item": "<b>Level A-</b> the most basic web accessibility features."
                     },
                     {
-                        "item": "Level B- deals with the biggest and most common barriers for disabled users."
+                        "item": "<b>Level B-</b> deals with the biggest and most common barriers for disabled users."
                     },
                     {
-                        "item": "Level C- the highest (and most complex) level of web accessibility."
+                        "item": "<b>Level C-</b> the highest (and most complex) level of web accessibility."
                     },
                 ],
             },
@@ -100,22 +100,22 @@ export const Lang = {
                 "discription": "",
                 "waysToTest": [
                     {
-                        "item": "Try to use the keyboard: If you are a gamer or excel expert, then this test must be easier for you. Try not to touch the mouse and access the website with the help of a keyboard. You can use the “Tab” key to switch between links, buttons and other actionable items. \n “Tab”+”Shift” will take you where you were before."
+                        "item": "<b>Try to use the keyboard:</b> If you are a gamer or excel expert, then this test must be easier for you. Try not to touch the mouse and access the website with the help of a keyboard. You can use the “Tab” key to switch between links, buttons and other actionable items. \n “Tab”+”Shift” will take you where you were before."
                     },
                     {
-                        "item": "Skip navigation: This may be useful for people with motor disabilities. By clicking Ctrl + Home you can move your focus to the top of the page."
+                        "item": "<b>Skip navigation:</b> This may be useful for people with motor disabilities. By clicking Ctrl + Home you can move your focus to the top of the page."
                     },
                     {
-                        "item": "Checking for captions: Check if a caption is available and make sure it is pretty much descriptive. Many times we come across links on the facebook page where the images or videos may take a long time to display but the captions will help us a lot."
+                        "item": "<b>Checking for captions:</b> Check if a caption is available and make sure it is pretty much descriptive. Many times we come across links on the facebook page where the images or videos may take a long time to display but the captions will help us a lot."
                     },
                     {
-                        "item": "Use field label: It is useful while filling a form, field label is what you will see while viewing a template. By using this, one can fill out the necessary information while signing up or ordering something online."
+                        "item": "<b>Use field label:</b> It is useful while filling a form, field label is what you will see while viewing a template. By using this, one can fill out the necessary information while signing up or ordering something online."
                     },
                     {
-                        "item": "Changing the font size to large: Use large font size and continuer accessibility checking."
+                        "item": "<b>Changing the font size to large:</b> Use large font size and continuer accessibility checking."
                     },
                     {
-                        "item": "By turning off the cascading style sheet (CSS): CSS is basically used to describe the presentation of the document. By turning this off we can check for the background color, text style, and text presentation style."
+                        "item": "<b>By turning off the cascading style sheet (CSS):</b> CSS is basically used to describe the presentation of the document. By turning this off we can check for the background color, text style, and text presentation style."
                     }
                 ],
             },
@@ -277,7 +277,7 @@ export const Lang = {
             name: "Dropdown",
             heading: "Dropdown",
             subheading: "",
-            maindiscription: "",
+            maindiscription: "A drop-down list (abbreviated drop-down; also known as a drop-down menu, drop menu, pull-down list, picklist) is a graphical control element similar to a list box that allows the user to choose one value from a list. When a drop-down list is inactive, it displays a single value. When activated, it displays (drops down) a list of values, from which the user may select one ",
             gitLink: "https://github.com/saurabhanand3390/differentlyabled/blob/master/src/components/Dropdown.js",
             accessiblity:
             {
@@ -371,7 +371,7 @@ export const Lang = {
             name: "Slider",
             heading: "Slider",
             subheading: "",
-            maindiscription: "",
+            maindiscription: "A slider is a user interface pattern that allows users to select a value between a continuous scale (or at least the appearance of a continuous scale) between a minimum and maximum value. The user moves the slider horizontally or vertically to select a value. The design of this control is highly visual in the way it is portrayed on the screen, inviting the user to literally slide the control along the slider axis, but it works with the arrow keys on the keyboard as well.",
             gitLink: "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles",
             accessiblity:
             {
@@ -438,7 +438,7 @@ export const Lang = {
             name: "Checkbox",
             heading: "Checkbox",
             subheading: "",
-            maindiscription: "",
+            maindiscription: "A checkbox (check box, tickbox, tick box) is a GUI widget that permits the user to make a binary choice, i.e. a choice between one of two possible mutually exclusive options. For example, the user may have to answer 'yes' (checked) or 'no' (not checked) on a simple yes/no question. Check boxes are shown checked (depending on the GUI). A caption describing the meaning of the checkbox is normally shown adjacent to the checkbox. Inverting the state of a checkbox is done by clicking the mouse on the box, or the caption, or by using a keyboard shortcut, such as the space bar.",
             gitLink: "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles",
             accessiblity:
             {

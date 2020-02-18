@@ -10,7 +10,8 @@ class PageIntro extends React.Component {
         };
     } 
     render(props) {
-    let heading = <h1 dangerouslySetInnerHTML={{ __html: this.props.heading}} />;
+        let h1 = <h1 dangerouslySetInnerHTML={{ __html: this.props.h1 }} />;
+        let heading = <h2 dangerouslySetInnerHTML={{ __html: this.props.heading}} />;
         let sec_heading = <h2 dangerouslySetInnerHTML={{ __html: this.props.sec_heading}} />;
         let subheading = <div><i dangerouslySetInnerHTML={{ __html: this.props.subheading }}/></div>;
         let paragraph = <p dangerouslySetInnerHTML={{ __html: this.props.paragraph}} />;
@@ -25,20 +26,21 @@ class PageIntro extends React.Component {
                 )}</ul>
         }
         if (this.props.table) {
-            list = <table>{
-                this.props.table.map(table => {
+            list = <table><thead></thead><tbody>{
+                this.props.table.map((table, index) => {
                     return (
-                        <tr className={table.class}>
+                        <tr key={index} className={table.class}>
                             <td dangerouslySetInnerHTML={{ __html: table.guideline }} />
                             <td dangerouslySetInnerHTML={{ __html: table.summary }} />
                         </tr>
                     )
                 }
-                )}</table>
+                )}</tbody></table>
         }
         return (
             <Row>
                 <Col>
+                    {this.props.h1 ? h1 : null}
                     {this.props.heading ? heading : null}
                     {this.props.sec_heading ? sec_heading : null}
                     {this.props.subheading ? subheading : null}
